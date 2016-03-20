@@ -5,3 +5,6 @@ RUN apk update && apk upgrade \
   && rm -rf /var/cache/apk/*
 RUN wget https://bootstrap.pypa.io/get-pip.py -O - | python3
 RUN pip install jupyter
+
+EXPOSE 8888
+CMD ["jupyter", "notebook"]
